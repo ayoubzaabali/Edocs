@@ -41,9 +41,6 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
-$app->singleton(
-  Artisan::call('cache:clear');
-);
 
 
 /*
