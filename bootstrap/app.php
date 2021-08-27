@@ -40,6 +40,12 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
+
+$app->singleton(
+  Artisan::call('cache:clear');
+);
+
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
