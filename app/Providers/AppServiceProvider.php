@@ -22,6 +22,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+    $this->app->bind(ClearController::class, function ($app) {
+               return ClearController::index();
+         });
     }
 }
