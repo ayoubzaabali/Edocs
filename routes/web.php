@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/clear-cache', function() {
-    Artisan::call('cache:clear');
-    return "Cache is cleared";
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode = Artisan::call('config:cache');
+    return 'DONE'; //Return anything
 });
 
 //home&login routes
