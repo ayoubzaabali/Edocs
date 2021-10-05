@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class ClearController extends Controller
 {
     function index(){
-      echo"";
+      Artisan::call('config:cache');
     }
 }
